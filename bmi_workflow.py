@@ -10,7 +10,7 @@ llm = HuggingFaceEndpoint(
     repo_id = "google/gemma-2-2b-it",
     task="text-generation",
     huggingfacehub_api_token=api_key,  # ✅ THIS IS CRITICAL!
-
+           
 )
 
 model = ChatHuggingFace(llm = llm)
@@ -65,4 +65,5 @@ initial_state = {'weight_kg' : 80, 'height_m': 1.73}
 final_state = workflow.invoke(initial_state)
 
 print(final_state)
+
 
