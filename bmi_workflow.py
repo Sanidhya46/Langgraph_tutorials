@@ -14,7 +14,7 @@ llm = HuggingFaceEndpoint(
 )
 
 model = ChatHuggingFace(llm = llm)
-
+                
 # STRUCTURE OF THE STATE
 class BMISTATE(TypedDict):
     weight_kg: float
@@ -65,5 +65,6 @@ initial_state = {'weight_kg' : 80, 'height_m': 1.73}
 final_state = workflow.invoke(initial_state)
 
 print(final_state)
+
 
 
